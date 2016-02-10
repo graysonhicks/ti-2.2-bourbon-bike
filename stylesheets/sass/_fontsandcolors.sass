@@ -2,6 +2,7 @@ body
   background-image: url('../../img/bg.jpg')
   background-size: cover
 
+
 header
   background: linear-gradient(rgba($blue, 0.6), rgba($blue, 0.8)), url('../../img/header.jpg')
 
@@ -15,6 +16,15 @@ header
 
 section
   @include section-border-shadow
+
+.slides
+  img
+    @include section-border-shadow
+
+.slick-dots
+  li
+    button:before
+      font-size: 20px
 
 .first,
 .third
