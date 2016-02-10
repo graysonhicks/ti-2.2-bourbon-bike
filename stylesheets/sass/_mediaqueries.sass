@@ -1,4 +1,3 @@
-
 @media (max-width: 768px)
 
   .slides
@@ -6,23 +5,40 @@
 
 @media (max-width: 568px)
 
+  .first
+    h4
+      padding-top: 35px
+
   .slides
     @include shift(3)
 
+  .fourth
+    h4
+      a
+        font-size: 12px
+
 @media (max-width: 500px)
 
-/* SECTIONS */
+  /* SECTIONS */
 
-h4
-  font-size: .75em
+  h4
+    font-size: .75em
 
-.fourth
+  .slides
+    @include shift(0)
+
+  .third
+    h4
+      padding-top: 35px
+
+  .fourth
+    h3
+      padding-left: 10px
+      padding-right: 10px
+    h4
+      a
+        font-size: 7px
+
+  /*FOOTER*/
   h3
-    padding-left: 10px
-    padding-right: 10px
-
-
-
-/*FOOTER*/
-h3
-  font-size: .75em
+    font-size: .75em

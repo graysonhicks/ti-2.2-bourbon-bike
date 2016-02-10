@@ -315,6 +315,9 @@ section {
 .second,
 .fourth {
   background-color: #406ab6; }
+  .second h4,
+  .fourth h4 {
+    font-size: 1em; }
 
 .fourth {
   border-bottom: none; }
@@ -348,18 +351,33 @@ section {
   .slides {
     margin-left: 8.5298%; } }
 @media (max-width: 568px) {
+  .first h4 {
+    padding-top: 35px; }
+
   .slides {
-    margin-left: 25.58941%; } }
-/* SECTIONS */
-h4 {
-  font-size: 0.75em; }
+    margin-left: 25.58941%; }
 
-.fourth h3 {
-  padding-left: 10px;
-  padding-right: 10px; }
+  .fourth h4 a {
+    font-size: 12px; } }
+@media (max-width: 500px) {
+  /* SECTIONS */
+  h4 {
+    font-size: 0.75em; }
 
-/*FOOTER */
-h3 {
-  font-size: 0.75em; }
+  .slides {
+    margin-left: 0%; }
+
+  .third h4 {
+    padding-top: 35px; }
+
+  .fourth h3 {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .fourth h4 a {
+    font-size: 7px; }
+
+  /*FOOTER */
+  h3 {
+    font-size: 0.75em; } }
 
 /*# sourceMappingURL=main.css.map */
