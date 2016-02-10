@@ -1,0 +1,59 @@
+/* HEADER */
+
+header
+  @include outer-container
+  text-align: center
+  height: 365px
+
+.logoandname
+  @include outer-container
+  padding-top: 60px
+  img
+    @include span-columns(2)
+    @include shift(8)
+  h1
+    @include span-columns(6)
+    @include shift(3)
+    margin-top: 15px
+
+/* SECTIONS */
+
+section
+  margin-top: 10px
+  margin-bottom: 10px
+
+.first
+  height: 120px
+  h4
+    padding-top: 45px
+
+.second
+  img
+    height: 280px
+    @include fill-parent
+  div
+    @include span-columns(4)
+    height: 280px
+
+
+
+.third
+  height: 150px
+  h4
+    @include span-columns(10)
+    @include shift(1)
+    padding-top: 45px
+
+.fourth
+  height: 290px
+  margin-bottom: 0px
+  h3
+    padding-top: 100px
+
+/* FOOTER */
+
+footer
+  text-align: center
+  height: 70px
+  h3
+    padding-top: 25px
