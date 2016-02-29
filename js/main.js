@@ -1,42 +1,45 @@
+window.jQuery = $ = require('jquery');
+var handlebars = require('handlebars');
+var bootstrap = require('bootstrap-sass/assets/javascripts/bootstrap.min.js');
+var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+var flickrOptions = {
+  tags: "bike",
+  format: "json"
+};
 
-$(document).ready(function(){
-  $('.responsive').slick({
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 569,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+getFlickr();
+
+
+function getFlickr(){
+  console.log('test');
+  $.getJSON(flickrAPI, flickrOptions, buildCarousel);
+}
+
+
+function buildCarousel(images){
+
+    images = images.items;
+    var slideSource = $("#image-slides").html();
+    var slideTemplate = handlebars.compile(slideSource);
+    var slideRenderedTemplate = slideTemplate({"images": images});
+
+    $('#bike-carousel').html(slideRenderedTemplate);
+    var firstImage = $('#bike-carousel div').first().addClass("active");
+    console.log(firstImage);
+    // var firstSlide = $('#image-slides div').first();
+
+}
+
+$('#main-carousel-container').carousel();
+  // you want to enable the pointer events only on click;
+
+$('#google-map').addClass('scrolloff'); // set the pointer events to none on doc ready
+$('.map').on('click', function () {
+    $('#google-map').removeClass('scrolloff'); // set the pointer events true on click
+});
+
+// you want to disable pointer events when the mouse leave the canvas area;
+
+$("#google-map").mouseleave(function () {
+    $('#google-map').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
 });
