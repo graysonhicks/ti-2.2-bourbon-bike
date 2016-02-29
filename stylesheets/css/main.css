@@ -3,7 +3,8 @@
 
 /* HEADER */
 header {
-  height: 365px; }
+  height: 425px;
+  padding-top: 10px; }
 
 .logoandname {
   padding-top: 50px;
@@ -21,7 +22,7 @@ section {
 
 .first {
   height: 60px;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-bottom: 0px; }
   .first h4 {
     margin-top: 0px;
@@ -32,7 +33,7 @@ section {
 #main-carousel-container {
   width: 100%;
   height: 500px;
-  margin-top: 10px; }
+  padding-top: 10px; }
 
 .carousel-inner {
   height: 500px; }
@@ -45,9 +46,11 @@ section {
   height: 150px;
   padding-left: 50px;
   padding-right: 50px;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  margin-top: 0px; }
   .third h4 {
-    padding-top: 45px; }
+    padding-top: 45px;
+    margin-top: 0px; }
 
 .fourth {
   height: 400px;
@@ -77,11 +80,17 @@ header {
     font-size: 60px;
     color: white; }
 
+.header-nav-list li {
+  padding: 0px; }
+  .header-nav-list li a {
+    background-color: #eee; }
+
 .main-content {
   background-image: url("../../img/bg.jpg"); }
 
 .first {
-  background: linear-gradient(#9ab1dc, #406ab6); }
+  background: linear-gradient(rgba(31, 51, 88, 0.6), rgba(31, 51, 88, 0.8)), url("../../img/header.jpg");
+  background-size: cover; }
 
 .left.carousel-control,
 .right.carousel-control {
